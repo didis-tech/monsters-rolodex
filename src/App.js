@@ -25,19 +25,21 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="clock">
-        <div className="hour">
-          <div className="hr" id="hr"></div>
-        </div>
+      <>
+        <div className="clock">
+          <div className="hour">
+            <div className="hr" id="hr"></div>
+          </div>
 
-        <div className="min">
-          <div className="mn" id="mn"></div>
-        </div>
+          <div className="min">
+            <div className="mn" id="mn"></div>
+          </div>
 
-        <div className="sec">
-          <div className="sc" id="sc"></div>
+          <div className="sec">
+            <div className="sc" id="sc"></div>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
