@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "./components/card-list/card-list.component";
 import "./App.css";
 import SearchBox from "./components/search-box/search-box.component";
+import users from "./users";
 
 class App extends Component {
   constructor() {
@@ -16,13 +17,17 @@ class App extends Component {
 
   componentDidMount() {
     // console.log("componentDidMount");
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((users) =>
-        this.setState(() => {
-          return { monsters: users, filteredMonsters: users };
-        })
-      );
+
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    //   .then((response) => response.json())
+    //   .then((users) =>
+    //     this.setState(() => {
+    //       return { monsters: users };
+    //     })
+    //   );
+    this.setState(() => {
+      return { monsters: users };
+    });
   }
   onSearchChange = (event) => {
     // console.log(event.target.value);
